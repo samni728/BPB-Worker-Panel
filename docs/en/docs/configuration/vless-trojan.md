@@ -1,8 +1,8 @@
 # :material-cog-outline:{ .md .middle } VLESS and Trojan settings
 
-These settings apply only to **Fragment** and **Full Normal** subscriptions.  
+These settings apply only to **Fragment** and **Full Normal** subscriptions.
 
-![VLESS and Trojan settings](../images/vless-trojan-settings.jpg)
+![VLESS and Trojan settings](../../../assets/images/vless-trojan-settings.jpg)
 
 ## Remote DNS
 
@@ -13,22 +13,18 @@ https://8.8.8.8/dns-query
 ```
 
 !!! warning
-    Avoid using `https://1.1.1.1/dns-query`, `https://cloudflare-dns.com/dns-query`, or any Cloudflare-related DNS for remote DNS, as they significantly increase ping and destabilize the connection with workers.
+Avoid using `https://1.1.1.1/dns-query`, `https://cloudflare-dns.com/dns-query`, or any Cloudflare-related DNS for remote DNS, as they significantly increase ping and destabilize the connection with workers.
 
 !!! tip
-    From version 2.5.5 onward, you can use some well known DoH or DoT servers:
-    ```
-    https://dns.google/dns-query
-    ```
-    ```
-    https://dns.adguard-dns.com/dns-query
-    ```
-    ```
-    https://dns.quad9.net/dns-query
-    ```
-    ```
-    tls://dns.google
-    ```
+From version 2.5.5 onward, you can use some well known DoH or DoT servers:
+`    https://dns.google/dns-query
+   `
+`    https://dns.adguard-dns.com/dns-query
+   `
+`    https://dns.quad9.net/dns-query
+   `
+`    tls://dns.google
+   `
 
 ## Local DNS
 
@@ -49,7 +45,7 @@ You may enable Fake DNS to reduce DNS query latency, but use caution—it may be
 Starting with version 2.3.5, you can change the Proxy IP via the panel by applying the change and updating the subscription. However, setting the Proxy IP through the Cloudflare dashboard or using wizard is recommended because:
 
 !!! note
-    Changing the Proxy IP via the panel requires updating the subscription if the IP stops working. This can disrupt donated configs, as users without an active subscription cannot update them. Use this method only for personal usage. Other methods don’t require subscription updates.
+Changing the Proxy IP via the panel requires updating the subscription if the IP stops working. This can disrupt donated configs, as users without an active subscription cannot update them. Use this method only for personal usage. Other methods don’t require subscription updates.
 
 Select a Proxy IP from the following link, which lists IPs by region and ISP:
 
@@ -58,20 +54,20 @@ https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 ```
 
 !!! info
-    To use multiple Proxy IPs, enter them as shown in the section image.
+To use multiple Proxy IPs, enter them as shown in the section image.
 
 ## Chain Proxy
 
 As noted, a Proxy IP fixes the IP for Cloudflare target addresses, but node IPs may differ for other targets. A **Chain Proxy** ensures a consistent IP for all targets. You can use a free VLESS, Socks, or HTTP config here, even if it’s blocked by your ISP, to permanently fix your IP to the Chain Proxy IP.
 
 !!! note
-    The Chain Proxy config must not be a worker itself, or the final IP will still change.
+The Chain Proxy config must not be a worker itself, or the final IP will still change.
 
 !!! tip
-    Free configs are available from sources like [racevpn.com](https://racevpn.com). Their free plan configs expire after three days but are stable and region-specific.
+Free configs are available from sources like [racevpn.com](https://racevpn.com). Their free plan configs expire after three days but are stable and region-specific.
 
 !!! note
-    Supported VLESS config types include:  
+Supported VLESS config types include:
 
     - WS
     - Reality WS
@@ -86,13 +82,13 @@ As noted, a Proxy IP fixes the IP for Cloudflare target addresses, but node IPs 
     - TCP TLS
 
 !!! note
-    Socks configs can be in these formats:
+Socks configs can be in these formats:
 
     - socks://`address`:`port`
     - socks://`user`:`pass`@`address`:`port`
 
 !!! note
-    HTTP configs can be in these formats:  
+HTTP configs can be in these formats:
 
     - http://`address`:`port`
     - http://`user`:`pass`@`address`:`port`
@@ -101,20 +97,17 @@ This setting applies to all subscriptions except **Normal** and **Warp**. After 
 
 However, **Normal** subscriptions import the Chain Proxy individually. In clients like Nekobox or Husi, edit the subscription in the Group section and set the Chain Proxy as the **Landing Proxy** to chain it. Since version 1.9.1, v2rayNG supports this feature: copy the config name, edit the subscription in the Subscription group settings, and paste it into the `Next proxy remarks` field.
 
-!!! warning
-    - VLESS TLS configs for chaining must use port 443.
-    - VLESS configs with randomized ALPN values are incompatible with Clash due to lack of Fingerprint support.
-    - VLESS WS configs are unsuitable for chaining on Sing-box due to a bug.
+!!! warning - VLESS TLS configs for chaining must use port 443. - VLESS configs with randomized ALPN values are incompatible with Clash due to lack of Fingerprint support. - VLESS WS configs are unsuitable for chaining on Sing-box due to a bug.
 
 ## Clean IP/Domains
 
 For non-**Fragment** subscriptions, you may want to use clean IPs. The panel includes a scanner, downloadable as a zip file for your operating system. Run the CloudflareScanner, and results will be saved in `result.csv`, allowing you to select IPs based on delay and download speed. Windows is recommended for this process, and ensure your VPN is disconnected during the test. For advanced scanning, refer to [this guide](https://github.com/bia-pain-bache/Cloudflare-Clean-IP-Scanner/blob/master/README.md).
 
 !!! tip "Tip for Iranian Users"
-    On ISPs supporting IPv6 (e.g., Rightel, Irancell, Asiatech), enable IPv6 on your SIM card, activate the **Prefer IPv6** option in client settings, and use the last two or first default configs. IPv6 IPs generally perform better.
+On ISPs supporting IPv6 (e.g., Rightel, Irancell, Asiatech), enable IPv6 on your SIM card, activate the **Prefer IPv6** option in client settings, and use the last two or first default configs. IPv6 IPs generally perform better.
 
 !!! tip
-    When using **Fragment**, Clean IPs do not play a significant role, but some ISPs, like Rightel, may still require them.
+When using **Fragment**, Clean IPs do not play a significant role, but some ISPs, like Rightel, may still require them.
 
 To add custom configs alongside default ones, enter clean IPs or domains as shown in the section image and click **Apply**. Updated subscription will import these new configs, which are also added to **Best Ping** and **Best Fragment** configs.
 
@@ -133,10 +126,10 @@ Use a Custom CDN (e.g., Fastly, Gcore) to mask your Worker domain. Configure the
 After configuring these fields, related configs will be added to **Normal** and **Full Normal** subscriptions, tagged with a `C` flag to distinguish them.
 
 !!! info
-    Only ports 443 and 80 are supported for these configs.
+Only ports 443 and 80 are supported for these configs.
 
 !!! warning
-    For **Normal** subscriptions, manually enable **Allow Insecure** in the config settings. **Full Normal** subscription applies this automatically.
+For **Normal** subscriptions, manually enable **Allow Insecure** in the config settings. **Full Normal** subscription applies this automatically.
 
 ## Best Interval
 
@@ -151,10 +144,10 @@ Enable either or both **VLESS** and **Trojan** protocols.
 Select the required ports. TLS ports offer more secure configs, but during TLS disruptions or when **Fragment** underperforms, non-TLS configs can be a viable alternative.
 
 !!! note
-    Non-TLS configs require the panel to be deployed using the Workers method. HTTP ports will not appear in the panel if the Pages method is used or you set a custom domain.
+Non-TLS configs require the panel to be deployed using the Workers method. HTTP ports will not appear in the panel if the Pages method is used or you set a custom domain.
 
 !!! info
-    Non-TLS configs are only added to **Normal** and **Full Normal** subscriptions.
+Non-TLS configs are only added to **Normal** and **Full Normal** subscriptions.
 
 ## Fingerprint
 

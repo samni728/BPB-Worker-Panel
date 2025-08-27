@@ -1,6 +1,6 @@
 # 💦 BPB Panel
 
-![Pages Application](images/panel-overview.jpg)
+![Pages Application](../../assets/images/panel-overview.jpg)
 
 ## Introduction
 

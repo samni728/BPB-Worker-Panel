@@ -1,6 +1,6 @@
 # :material-playlist-check:{ .md .middle } Warp subscriptions
 
-![Warp subscriptions](../images/warp-sub.jpg)
+![Warp subscriptions](../../../assets/images/warp-sub.jpg)
 
 This subscription includes:
 

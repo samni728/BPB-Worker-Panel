@@ -1,6 +1,6 @@
 # :material-fingerprint:{ .md .middle } My IP
 
-![My IP](../images/my-ip.jpg)
+![My IP](../../../assets/images/my-ip.jpg)
 
 After connecting to the proxy, refresh this section and check it to view your IPs. The table displays two rows:
 
@@ -8,4 +8,4 @@ After connecting to the proxy, refresh this section and check it to view your IP
 - If using Warp configs, both rows should display the same IP.
 
 !!! warning
-    Disable extensions like `uBlock` or `AdGuard`, Otherwise this section won't work properly.
+Disable extensions like `uBlock` or `AdGuard`, Otherwise this section won't work properly.

@@ -2,7 +2,7 @@
 
 To simplify the setup process and prevent user mistakes during creation, the [BPB Wizard](https://github.com/bia-pain-bache/BPB-Wizard) project was launched. It supports both Workers and Pages methods and is highly recommended to use.
 
-![Pages Application](../images/wizard.jpg)
+![Pages Application](../../../assets/images/wizard.jpg)
 
 ## 1. Cloudflare account
 
@@ -11,7 +11,7 @@ To use this method, all you need is a Cloudflare account. You can [sign up here]
 ## 2. Install BPB Panel
 
 !!! warning
-    If you're connected to a VPN, disconnect it.
+If you're connected to a VPN, disconnect it.
 
 ### Windows - Linux - macOS
 
@@ -26,7 +26,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/ma
 ```
 
 !!! warning  
-    Be sure to download and install Termux only from its [official source](https://github.com/termux/termux-app/releases/latest). Installing via Google Play might cause issues.
+ Be sure to download and install Termux only from its [official source](https://github.com/termux/termux-app/releases/latest). Installing via Google Play might cause issues.
 
 The first question asks whether you want to create a new panel or modify existing panels in the account.
 
@@ -35,7 +35,7 @@ Then logs into your Cloudflare account, Asks for your permission, returns to the
 If you choose option 1, it will ask a series of configuration questions. You can use the default values or input your own. In the end, it opens the panel for you in your browser — that’s it.
 
 !!! note
-    For each setting it asks about, it has already generated a secure, personal value for you. You can simply press Enter to accept it and move on to the next question, or input your own values.
+For each setting it asks about, it has already generated a secure, personal value for you. You can simply press Enter to accept it and move on to the next question, or input your own values.
 
 If you choose option 2, it lists deployed Workers and Pages projects and you can choose which one to modify.
 

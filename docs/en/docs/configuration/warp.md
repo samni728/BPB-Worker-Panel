@@ -1,16 +1,14 @@
 # :material-cog-outline:{ .md .middle } Warp General settings
 
-These settings apply to both **Warp** and **Warp Pro** subscriptions.  
+These settings apply to both **Warp** and **Warp Pro** subscriptions.
 
-![Warp General settings](../images/warp-settings.jpg)
+![Warp General settings](../../../assets/images/warp-settings.jpg)
 
 ## Endpoints - Scanner
 
 Endpoints for Warp function similarly to Clean IPs for VLESS and Trojan. The panel provides a scanner that you can run on Termux (Android), Windows, macOS or Linux and input the results here. Note that the results are not 100% reliable, so testing is necessary. Please note that you have to exit any proxy app before testing, if you use v2rayN, you should completely exit it from taskbar, clearing proxy is not enough.
 
-!!! info
-    - Endpoints are formatted as IP:Port or Domain:Port and must be entered one per line.
-    - For IPv6 addresses, enclose them in square brackets. See the example below:
+!!! info - Endpoints are formatted as IP:Port or Domain:Port and must be entered one per line. - For IPv6 addresses, enclose them in square brackets. See the example below:
 
     Endpoint examples:
     ```title="IPv4"
@@ -21,7 +19,7 @@ Endpoints for Warp function similarly to Clean IPs for VLESS and Trojan. The pan
     ```
     ```title="Domain"
     engage.cloudflareclient:2408
-    ```  
+    ```
 
 ## Fake DNS
 

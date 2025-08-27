@@ -1,8 +1,8 @@
 # :material-cog-outline:{ .md .middle } Warp Pro settings
 
-This section applies exclusively to the **Warp Pro** subscription, as detailed [here](../usage/warp-pro.md).  
+This section applies exclusively to the **Warp Pro** subscription, as detailed [here](../usage/warp-pro.md).
 
-![Warp Pro settings](../images/warp-pro-settings.jpg)
+![Warp Pro settings](../../../assets/images/warp-pro-settings.jpg)
 
 ## Definitions
 
@@ -53,7 +53,7 @@ Four modes are available for **v2rayNG** and **v2rayN** clients: **base64**, **s
 
 ### Noise Packet
 
-The packet value must correspond to the selected mode:  
+The packet value must correspond to the selected mode:
 
 - **Base64**: Requires a valid Base64 value.
 - **String**: Can be any string.
@@ -78,6 +78,4 @@ salamchetori123
 01d800f9373b2c418713aafde43021004ac3b89f
 ```
 
-!!! tip
-    - Convert text to Base64 using [this tool](https://onlinebase64tools.com/base64-encode).
-    - Generate a Hex string with [this tool](https://onlinetools.com/random/generate-random-hexadecimal-numbers).
+!!! tip - Convert text to Base64 using [this tool](https://onlinebase64tools.com/base64-encode). - Generate a Hex string with [this tool](https://onlinetools.com/random/generate-random-hexadecimal-numbers).
